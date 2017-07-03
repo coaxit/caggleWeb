@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="caggleApp">
+<head>
+	<meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="Caggle" name="description" />
+    <meta content="Caggle" name="author" />
+    <title>Caggle - Keep your Car. Trade your Lender.</title>
+    <link href="dist/css/main.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+
+    <![endif]-->
+    <!--[if lt IE 9]>
+
+    <![endif]-->
+    <link href="dist/images/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="dist/images/favicon.png" rel="icon" />
+    
+</head>
+
+<body class="overflow innerpage home-page">
+
+      <div ng-include="'includes/header.html'"></div>
+
+        <div class="site-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                  <section class="home_teaser teaser--grey">
+                    <div class="container-fluid"> 
+
+                        <div ui-view> </div>
+
+                    </div>
+                  </section>
+
+                </div>
+            </div>
+        </div>
+        
+  <div ng-include="'includes/footer.html'"></div>
+  
+
+  
+  <script src="dist/js/libs.js" type="text/javascript"></script>
+  <script src="dist/js/angularlib.js" type="text/javascript"></script>
+  <script src="dist/js/main.js" type="text/javascript"></script>
+    <script src="assets/angularlib/angular-local-storage.min.js" type="text/javascript"></script>
+  <script src="app/app.js"></script>
+  <script src="app/login/login-controller.js"></script>
+  <script src="app/dashboard/dashboard-controller.js"></script>
+</body>
+</html>
