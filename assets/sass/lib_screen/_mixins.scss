@@ -1,0 +1,32 @@
+@mixin borderRadius($values){
+    border-radius: $values;
+    -moz-border-radius: $values;
+	-webkit-border-radius: $values;
+}
+
+@mixin transition($values){
+    transition: transition($values);
+    -moz-transition: transition($values);
+	-webkit-transition: transition($values);
+}
+@mixin translate($values){
+    transform: translate($values);
+    -moz-transform: translate($values);
+	-webkit-transform: translate($values);
+}
+@mixin boxShadow($values){
+    box-shadow: $values;
+    -moz-box-shadow: $values;
+	-webkit-box-shadow: $values;
+}
+@mixin rotate($values){
+    transform: rotate($values);
+    -moz-transform: rotate($values);
+    -webkit-transform: rotate($values);
+}
+@mixin skew($values){
+    transform: skew($values);
+    -moz-transform: skew($values);
+    -webkit-transform: skew($values);
+    -ms-transform: skew($values);
+}

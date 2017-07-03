@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i');
+
+@font-face {
+    font-family: 'MyriadProBold';
+    src: url('../fonts/myriadpro/MyriadProBold.eot');
+    src: url('../fonts/myriadpro/MyriadProBold.eot') format('embedded-opentype'),
+         url('../fonts/myriadpro/MyriadProBold.woff2') format('woff2'),
+         url('../fonts/myriadpro/MyriadProBold.woff') format('woff'),
+         url('../fonts/myriadpro/MyriadProBold.ttf') format('truetype'),
+         url('../fonts/myriadpro/MyriadProBold.svg#MyriadProBold') format('svg');
+}
+@font-face {
+    font-family: 'MyriadProRegular';
+    src: url('../fonts/myriadpro/MyriadProRegular.eot');
+    src: url('../fonts/myriadpro/MyriadProRegular.eot') format('embedded-opentype'),
+         url('../fonts/myriadpro/MyriadProRegular.woff2') format('woff2'),
+         url('../fonts/myriadpro/MyriadProRegular.woff') format('woff'),
+         url('../fonts/myriadpro/MyriadProRegular.ttf') format('truetype'),
+         url('../fonts/myriadpro/MyriadProRegular.svg#MyriadProRegular') format('svg');
+}
+@font-face {
+    font-family: 'MyriadProSemibold';
+    src: url('../fonts/myriadpro/MyriadProSemibold.eot');
+    src: url('../fonts/myriadpro/MyriadProSemibold.eot') format('embedded-opentype'),
+         url('../fonts/myriadpro/MyriadProSemibold.woff2') format('woff2'),
+         url('../fonts/myriadpro/MyriadProSemibold.woff') format('woff'),
+         url('../fonts/myriadpro/MyriadProSemibold.ttf') format('truetype'),
+         url('../fonts/myriadpro/MyriadProSemibold.svg#MyriadProSemibold') format('svg');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html.screen-lock{
+  overflow: hidden;
+  position: relative;
+  min-height: $full-width;
+  body{
+    height: $full-width;
+  }
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #999;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #555;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #555;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #555;
+}
+
+body {
+  background: $color-white;
+  color: $color-dark;
+  font-size: $font-size_body;
+  font-family: $font-default;
+  font-weight: 400;
+}
+a {
+
+ /* @include hover-focus {
+    text-decoration: none;
+  }*/
+}
+a:focus, a:hover {
+  /*color: $color-green;*/
+  text-decoration: none!important;
+  outline: none!important;
+}
+html.overflow-hidden, body.overflow-hidden{
+  overflow: hidden;
+  position: relative;
+  min-height: 100%;
+  height: 100%;
+}
+body.home-page{
+  overflow-x: hidden;
+}
+.clearfix {
+  clear: both;
+  width: $full-width;
+  height: 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+  font-family: $font-default;
+}
+
+h1 {
+  color: #fff;
+  font-size: 3.75rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.125;
+  margin-bottom: 20px;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+img {
+  max-width: $full-width;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+ul, li{
+  list-style: outside none none;
+  margin: 0;
+  padding: 0; 
+}
+.is--hidden{
+  display: none;
+}
+.is--visible{
+  display: block;
+}
+.btn{
+     @include borderRadius(2px);
+     text-transform: uppercase; 
+     border: 2px solid $color-green;
+     color: $color-white;
+     @include transition(all 0.5s ease 0.5s);
+     &.btn--white{
+        &:hover{
+          border-color: $color-white;
+        }
+     }
+     &.btn--green{
+        background-color: $color-green;
+        &:hover{
+          border-color: $color-white;
+          background-color: $color-white;
+          color: $color-green;
+        }
+     }
+}
+
+.color-green{
+  color: $color-green;
+}
+.color-white{
+  color: $color-white;
+}
+
+.no--padding{
+  padding: 0!important;
+}
+.no--margin{
+  margin: 0!important;
+}
+.margin-4rem{
+  margin-top: 4rem;
+}
+.margin-1-5rem{
+  margin-top: 1.5rem;
+}
+.padding-bottom-5rem{
+  padding-bottom: 5rem;
+}
+
+.btn-primary{
+  background-color: $color-blue;
+  @include borderRadius(5px);
+  color: $color-white!important;
+  border-color: $color-blue;
+  font-family: $font-secondary;
+  font-weight: 300;
+  font-size: 1rem;
+  text-transform: none;
+  padding: .5rem 2rem;
+  &:hover, &:focus{
+    border-color: $color-hover2 !important;
+    background-color: $color-hover2!important;
+    color: $color-white!important;
+  }
+}
+
+@media (min-width: 768px){
+  .mobile-hidden{
+    display: block;
+  }
+  .mobile-visible{
+    display: none!important;
+  }
+}
+@media (max-width: 767px){
+  .mobile-hidden{
+    display: none!important;
+  }
+  .mobile-visible{
+    display: block;
+  }
+}
+.heading--blue{
+  color: $color-blue;
+}
+
+
+
+
+  
+

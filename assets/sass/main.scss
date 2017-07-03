@@ -1,0 +1,43 @@
+@import "lib_shared/vars";
+@import "lib_screen/vars";
+@import "lib_screen/mixins";
+@import "lib_screen/bootstrap_vars";  
+//@import "../vendor/icomoon/variables";
+
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import "../../bower_components/compass-mixins/lib/_compass.scss";
+@import "../../bower_components/bootstrap/scss/bootstrap.scss";
+// endbower
+
+/**
+Konrad Haenel - konrad.haenel@eqs.com   asd
+
+To make life easier for you and everyone else working on this project, please follow this advice:
+
+- Don't directly include styles in this file. Use imported files from ./lib for that.
+- Don't directly copy dependencies into lib. Use bower to install them.
+- Use multiple imported files, don't cram all styles into one giant file.
+- Seperate files sensibly, so that related concepts are close to one another
+  This point needs some explanation:
+  BAD:  Separating out mediaqueries. If you need to change one element, you now have to look in multiple files.
+  GOOD: Separating out style for tables. <table> is a complex element that is used on many pages and doesn't
+        concern other elements. A file containing everything needed to style tables can be very helpful.
+  Think about what an optimal unit of work is and put that in one scss file.
+
+  Read more about SCSS here: http://sass-lang.com/
+*/
+@import "lib_screen/bootstrap_material_design";
+@import "lib_screen/font-icon/font-awesome";
+@import "lib_screen/loader";
+@import "lib_screen/layout";
+@import "lib_screen/header";
+@import "lib_screen/navigation";
+@import "lib_screen/common";
+@import "lib_screen/banner";
+@import "lib_screen/button";
+@import "lib_screen/custom_grid";
+@import "lib_screen/footer";
+@import "lib_screen/mobilemenu";
+@import "lib_screen/form";
+@import "lib_screen/table";

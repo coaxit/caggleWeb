@@ -1,0 +1,129 @@
+.banner{
+	width: $full-width;
+	height: 176vh;
+	max-height: 1156px;
+	position: relative;
+	z-index: 1;
+	transition: height .8s ease .5s;
+	-moz-transition: height .8s ease .5s;
+	webkit-transition: height .8s ease .5s;
+	overflow: hidden;
+	@media (max-width: 767px){
+		height: 53vh;
+	}
+	@media (max-width: 480px){
+		height: 120vh;
+	}
+	@media (max-width: 640px) and (max-height: 360px){
+		height: 120vh;
+	}
+	@media (max-width: 480px) and (max-height: 320px){
+		height: 160vh;
+	}
+	@media (max-width: 360px) and (max-height: 640px){
+		height: 90vh;
+	}
+	&.active{
+		//height: 120vh;
+	}
+	&__bg{
+		background: url(../../dist/images/home-banner.png) no-repeat center top;
+		background-size: 100% auto;
+		height: $full-width;
+		width: $full-width;
+		position: absolute;
+	}
+	&__info{
+		height: $full-width;
+		width: $full-width;
+		max-width: 1400px;
+		margin: 0 auto;
+		position: relative;
+		text-align: center;
+		@media (max-width: 1400px){
+			max-width: 1200px;
+		}
+		&__text{
+			padding: 0 100px;
+			transform: translate(0, -40%);
+			-moz-transform: translate(0, -40%);
+			-webkit-transform: translate(0, -40%);
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: $full-width;
+			@media (max-width: 992px){
+				padding: 0;
+			}
+			.lead-header{
+				text-transform: none;
+			}
+		}
+		.lead-header{
+			font-size: 2.5rem;
+			color: $color-dark;
+			margin-bottom: 1rem;
+			font-weight: 600;
+			line-height: 1.2;
+			@media (max-width: 767px){
+				font-size: 1.87rem;
+				padding: 0 1rem;
+			}
+		}
+		.lead-text{
+			color: $color-dark;
+			font-size: 1.56rem;
+			font-family: $font-secondary;
+			@media (max-width: 767px){
+				font-size: 1.36rem;
+			}
+		}
+		.button-wrap{
+			padding-top: 1rem;
+			.btn{
+				font-size: 1.2rem;
+				@include borderRadius(50px);
+				@media (max-width: 767px){
+					font-size: 1rem;
+				}			
+				margin: 0 3px;
+				font-weight: 500;
+				padding: 0.5rem 1rem 0.3rem;
+				padding-left: 2.5rem;
+				line-height: 1.5;
+				&.btn-icon{
+					position: relative;
+					@include transition(all 0.6s ease 0.3s);
+					&:hover, &:focus{
+						color: $color-green;
+						.play-icon:after{
+							border-left-color: $color-green;
+						}
+					}
+				}
+				&.btn--blue{
+					background: $color-blue;
+					border-color: $color-blue;
+					color: $color-white;
+					padding-left: 1.75rem;
+					padding-right: 1.75rem;
+					font-family: $font-secondary;
+					text-transform: capitalize;
+					font-size: 1.3rem;
+					@include transition(all 0.6s ease 0.3s);
+					&:hover, &:focus{
+					    border-color: $color-hover2;
+					    background-color: $color-hover2!important;
+					    color: $color-white!important;
+					 }
+					@media (max-width: 360px){
+						margin-top:1rem;
+					}
+				}
+			}
+		}
+		
+
+	}
+}
+

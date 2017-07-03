@@ -1,0 +1,18 @@
+.table-responsive{
+	border: 1px solid $color-green;
+	table{
+		width: 100%;
+	}
+	/*tr:nth-of-type(odd) td{
+		background-color: #eee;
+	}
+	tr:nth-of-type(even) td{
+		background-color: #fbfbfb;
+	}*/
+	td{
+		border-top: 1px solid #e5e5e5;
+		background-color: #fbfbfb;
+		padding: .75rem;	
+		text-align: center;
+	}
+}

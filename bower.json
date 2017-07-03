@@ -1,0 +1,26 @@
+{
+  "name": "caggle",
+  "description": "Caggle using GULP",
+  "main": "",
+  "authors": [
+    "Shiju"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.2.4",
+    "respond": "^1.4.2",
+    "animate.css": "^3.5.2",
+    "compass-mixins": "compass-mixin#^1.0.2",
+    "bootstrap": "4.0"
+  }
+}

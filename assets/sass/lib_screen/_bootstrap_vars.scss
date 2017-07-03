@@ -1,0 +1,49 @@
+/*
+In this file we can override bootstrap default variables,
+including but not limited to
+- colors
+- breakpoints
+- paddings
+... and more
+*/
+
+
+/* khaenel:
+The "_bootstrap_vars.scss" file should only contain overrides of actual bootstrap vaiables. All other variables
+(like our own colors, sizes, paddings etc.) belong into "_vars.scss".
+
+naveen:d
+this color variable was first declared in vars.scss but not taking so I decalred it here
+
+*/
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+        xs: 0,
+  // Small screen / phone
+        sm: 767px,
+  // Medium screen / tablet
+        md: 992px,
+  // Large screen / desktop
+        lg: 1200px,
+  // Extra large screen / wide desktop
+        xl: 1400px
+);
+
+
+$container-max-widths: (
+    sm: 767px,
+    md: 854px,
+    lg: 1100px,
+    xl: 1100px
+);
+
+$grid-gutter-width: 24px;
+
+$link-color: $gray-dark;
+
+@media (max-width: 991px) {
+  [class*="col-"] {
+    margin-bottom: 15px;
+  }
+}

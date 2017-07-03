@@ -1,0 +1,69 @@
+{
+  "ReadMe": {
+    "Author URL": "http://use-asset-builder.austinpray.com/",
+    "Examples": "https://github.com/austinpray/asset-builder/blob/master/help/examples.md"
+  },
+  "config": {
+    "comments": [
+      "companyTemplateDirectory points to the template directory within 'companies' to watch for changes",
+      "wiredepStylesheet is the main stylesheet that contains the wiredep bower comments"
+    ],
+    "companyTemplateDirectory": "caggle",
+    "subdomainProxyURL": "",
+    "watchGlobs": [
+      "*.php"
+    ],
+    "wiredepStylesheet": "sass/main.scss",
+      "wiredepDirectory": "sass",
+    "modernizrOptions": {
+      "options": [
+        "setClasses"
+      ],
+      "tests": [
+        "flexbox"
+      ]
+    }
+  },
+  "dependencies": {
+    "main.js": {
+      "comments": "This is the project's basic JS file, all self-written JS should go here.",
+      "files": [
+        "js/**/*.js"
+      ]
+    },
+    "libs.js": {
+      "comments": "We keep all vendor-specific JS (including all Bower imports) in it's own JS file here",
+      "files": [
+        "vendor/**/*.js"
+      ],
+      "main": true
+    },
+    "angularlib.js": {
+      "comments": "We keep all angular-specific JS (including all Bower imports) in it's own JS file here",
+      "files": [
+        "angularlib/*.js"
+      ]
+    },
+    "main.css": {
+      "comments": "SCSS can be included from bower_components. If you really need more complex imports, read this: https://github.com/roots/sage/issues/1313#issuecomment-73735184",
+      "files": [
+        "sass/main.scss",
+        "vendor/**/*.scss",
+        "vendor/**/*.css"
+      ],
+      "main": true
+    },
+    "print.css": {
+      "files": [
+        "sass/print.scss"
+      ],
+      "main": false
+    }
+  },
+  "paths": {
+    "source": "assets/",
+    "dist": "dist/",
+    "distProduction": "dist/",
+    "sourceMaps": "../maps"
+  }
+}

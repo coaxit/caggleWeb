@@ -1,0 +1,51 @@
+
+<div class="row">
+	<div class="col-md-12 col-sm-12 col-xs-12">
+
+		<div class="form-wrapper inputs">
+			<form id="signup" ng-controller="SignupController" ng-submit="signup(user)">
+				<h3>Signup Here</h3>
+				<div class="form-group label-floating">
+					<label for="name" class="control-label">Name*</label> 
+					<input ng-model="user.name" id="name" name="name" class="form-control" required="required" value="" type="text"> 
+					<span class="help-block"> Please enter your name </span>
+				</div>
+
+				<div class="form-group label-floating">
+					<label for="name" class="control-label">Email*</label> 
+					<input ng-model="user.email" id="email" name="email" class="form-control" required="required" value="" type="text"> 
+					<span class="help-block">Please enter a valid email address</span>
+				</div>
+
+				<div class="form-group label-floating">
+					<label for="password" class="control-label">Password*</label> 
+					<input ng-model="user.password" id="password" name="password" class="form-control" required="required" value="" type="password"> 
+					<span class="help-block">Please enter password</span>
+				</div>
+
+				<div class="form-group label-floating">
+					<label for="confirmpassword" class="control-label"> Confirm Password*</label> 
+					<input ng-model="user.confirmPassword" id="confirmpassword" name="confirmpassword" class="form-control" required="required" value="" type="password">
+					<span class="help-block">Please confirm password</span>
+				</div>
+				<div class="form-group label-floating">
+					<div class="text-center">
+						<input class="btn btn-primary submit" value="Sign Up" type="submit">
+					</div>
+				</div>
+				<div class="separator text-center form-footer">
+					<p class="change_link"> Already have an account? 
+						<a ui-sref="login" class="finkr-color"> Sign in to your account </a>
+					</p>
+
+					<div class="clearfix"></div>
+
+					<div class="text-center">
+						<p>&copy;2017 All Rights Reserved. Caggle.</p>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+</div>
