@@ -1,24 +1,29 @@
 <!-- Step Two Form -->
-       <div class="step-container" id="step_2"  style="display: block;">
-       <h3><a href="#" class="back-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i>Back</a>Enter your vehicle details</h3>
-           <div class="form-group label-floating">  
-               <label for="vehicleCost" class="control-label">Vehicle Registration Number*</label>   
-               <input id="vehicleCost" name="vehicleCost" class="form-control" required="required" value="" type="text">
-               <span class="help-block">This field required</span>
-            </div>
-            
-            <div class="form-group label-floating">
-               <label for="collectedDeposit" class="control-label">Mileage*</label>
-               <input id="collectedDeposit" name="collectedDeposit" class="form-control" required="required" value="" type="text">
-               <span class="help-block">This field required</span>
-            </div>
-                <div class="form-group full-with">  
-              <div class="pull-left">
-                <input class="btn btn-primary back" value="Back" type="submit">
-                </div>
-                <div class="pull-right">
-                <input class="btn btn-primary submit" value="Save &amp; Continue" type="submit">
-              </div>
-            </div>
-        </div>
-       <!-- Step Two Form -->
+<div class="step-container" id="step_2">
+	<h3>
+		<a href="#" class="back-btn">
+			<i class="fa fa-chevron-left" aria-hidden="true"></i>
+			 Back
+		</a>Enter your vehicle details
+	</h3>
+	<div class="form-group label-floating">
+		<label for="regNumber" class="control-label">Vehicle Registration Number*</label> 
+			<input ng-model="vehicle.regNumber"  id="regNumber" name="regNumber" class="form-control" required="required" value="" type="text">
+		<span class="help-block">This field required</span>
+	</div>
+
+	<div class="form-group label-floating">
+		<label for="mileage" class="control-label">Mileage*</label> 
+		<input ng-model="vehicle.mileage"  id="mileage" name="mileage" class="form-control" required="required" type="text"> 
+			<span class="help-block">This field required</span>
+	</div>
+	<div class="form-group full-with">
+		<div class="pull-left">
+			<input class="btn btn-primary back" value="Back" type="submit">
+		</div>
+		<div class="pull-right">
+			<input ng-click="submitVehicledetails(vehicle)" class="btn btn-primary submit" value="Save &amp; Continue" type="submit">
+		</div>
+	</div>
+</div>
+<!-- Step Two Form -->

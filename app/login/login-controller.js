@@ -2,16 +2,10 @@ angular.module("caggleApp").controller('LoginController', ["$scope","$state", "$
 	function($scope,$state, $http, $rootScope, localStorageService, $localStorage ) {
 	
 	
-	$rootScope.username;
-	$scope.$watch('username', function() {
-		alert("header.. watsch" )
-	});
-	
 	$scope.login=function(user) {
 		console.log($scope.user.email);
 		
-		var restUrl =  "http://localhost:8181/CaggleApp/user/login";
-		
+		var restUrl =  getServerBaseUrl() +  "/user/login";
 		if($scope.user.email && $scope.user.password) {
 			$http({
 				url: restUrl,
@@ -20,11 +14,12 @@ angular.module("caggleApp").controller('LoginController', ["$scope","$state", "$
 				data: JSON.stringify({ user })
 			}).success(function(data) {
 				if(data.code == '200'){
-					$state.go('dashboard');
+					
 					$rootScope.username = data.currentUser.username;
 					localStorageService.set('username', data.currentUser.username);
-					$localStorage.username = data.currentUser.username;
-					alert($rootScope.username);
+//					$localStorage.username = data.currentUser.username;
+//					alert($rootScope.username);
+					$state.go('dashboard');
 				} else{
 					alert("Invalid Login");
 				}
@@ -47,7 +42,7 @@ angular.module("caggleApp").controller('SignupController', ["$scope","$state", "
 		if($scope.user.password != $scope.user.confirmPassword) {
 			alert("Password does not match.");
 		} else {
-			var restUrl =  "http://localhost:8181/CaggleApp/user/signup";
+			var restUrl =  getServerBaseUrl() + "/user/signup";
 			
 			$http({
 				url: restUrl,
@@ -55,7 +50,6 @@ angular.module("caggleApp").controller('SignupController', ["$scope","$state", "
 				headers: { 'Content-Type': 'application/json' },
 				data: JSON.stringify({ user })
 			}).success(function(data) {
-				alert(data);
 				if(data.code == '200'){
 					$state.go('login');
 				} else{

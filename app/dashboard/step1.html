@@ -23,7 +23,7 @@
           <div class="form-group label-floating adodn--elem"> 
               <span class="prefix-content">&pound;</span>  
              <label for="monthlyPayment" class="control-label">Monthly payment*</label>   
-             <input id="monthlyPayment" name="monthlyPayment" class="form-control" required="required" value="" type="text">
+             <input ng-model="loan.monthlyPayment" id="monthlyPayment" name="monthlyPayment" class="form-control" required="required" value="" type="text">
              <span class="help-block">This field required</span>
               <span class="popover-detail">Lorum ipsum dummy text</span>
               <span class="popover-link"><i class="fa fa-question-circle" aria-hidden="true"></i></span>
@@ -40,7 +40,7 @@
  --> 
           <div class="form-group label-floating is-selectbox">  
              <label for="monthlyPayment" class="control-label">How many months are left on your cal loan?*</label>   
-             <select id="monthlyPayment" name="monthlyPayment" class="form-control" required="required">
+             <select ng-model="loan.termLeft" id="termLeft" name="termLeft" class="form-control" required="required">
                <option value="">Please select</option>
                <option value="12">12</option>
                <option value="24">24</option>
@@ -73,7 +73,7 @@
           <div class="form-group label-floating adodn--elem addon-chekbox"> 
               <span class="prefix-content">&pound;</span>  
              <label for="settlementFigure" class="control-label">Enter your settlement figure*</label>   
-             <input id="settlementFigure" name="settlementFigure" class="form-control" required="required" value="" type="text">
+             <input ng-model="loan.settlementFigure"  id="settlementFigure" name="settlementFigure" class="form-control" required="required" value="" type="text">
              <span class="help-block">This field required</span>
               <span class="popover-detail">Lorum ipsum dummy text</span>
               <span class="popover-link"><i class="fa fa-question-circle" aria-hidden="true"></i></span>
@@ -83,7 +83,7 @@
           <div class="form-group label-floating adodn--elem addon-chekbox">
              <span class="prefix-content">&pound;</span>
              <label for="name" class="control-label">Enter your Final or Balloan payment*</label>    
-             <input id="email" name="email" class="form-control" required="required" value="" type="text">
+             <input ng-model="loan.balloanPayment"  id="balloanPayment" name="balloanPayment" class="form-control" required="required" value="" type="text">
              <span class="help-block">Please enter a valid email address</span>
              <span class="popover-detail">Lorum ipsum dummy text</span>
               <span class="popover-link"><i class="fa fa-question-circle" aria-hidden="true"></i></span>
@@ -97,7 +97,7 @@
               </div>
           <div class="form-group full-with">  
             <div class="pull-right">
-              <input class="btn btn-primary submit" value="Save &amp; Continue" type="submit">
+              <input ng-click="submitLoan(loan)" class="btn btn-primary submit" value="Save &amp; Continue" type="submit">
             </div>
         </div>
          </div>

@@ -32,9 +32,16 @@
 	        })
 	 
 	       $urlRouterProvider.otherwise('/login');
-	}]) .factory('httpRequestInterceptor', ["$sessionStorage", "$localStorage", function ($sessionStorage, $localStorage) {
-	        return {
-	            request: function (config) {
+	}]) .factory('httpRequestInterceptor', ["$sessionStorage", "$localStorage", "localStorageService", "$window",
+			function ($sessionStorage, $localStorage, localStorageService, $window) {
+	        return { 
+	        	
+	        	request: function (config) {
+	        		/*
+	        		if ( localStorageService.get('username') != null) {
+	        			$window.location = '#/login';
+		        	}
+		        	*/
 	                if ($sessionStorage.authToken) {
 	                    config.headers['auth-token'] = $sessionStorage.authToken;
 	                    config.headers['Accept'] = 'application/json';
